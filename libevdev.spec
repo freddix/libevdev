@@ -1,11 +1,11 @@
 Summary:	Handler library for evdev events
 Name:		libevdev
-Version:	1.3.2
+Version:	1.4
 Release:	1
 License:	MIT
 Group:		Libraries
 Source0:	http://www.freedesktop.org/software/libevdev/%{name}-%{version}.tar.xz
-# Source0-md5:	80c7b490bf3e7ec8e8b60d4fb307b664
+# Source0-md5:	eba88e8897fd296f3bb746bc39da18b3
 URL:		http://www.freedesktop.org/wiki/Software/libevdev/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -56,6 +56,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc COPYING
+%attr(755,root,root) %{_bindir}/libevdev-tweak-device
+%attr(755,root,root) %{_bindir}/mouse-dpi-tool
 %attr(755,root,root) %{_bindir}/touchpad-edge-detector
 %attr(755,root,root) %ghost %{_libdir}/libevdev.so.2
 %attr(755,root,root) %{_libdir}/libevdev.so.*.*.*
